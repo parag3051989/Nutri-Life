@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NutriLife - Diet & BMI Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-shape shape-1"></div>
+    <div class="background-shape shape-2"></div>
+    <div class="background-shape shape-3"></div>
+
+    <div class="container glass-panel">
+        <header>
+            <h1>NutriLife</h1>
+            <p>Your personalized path to healthy living</p>
+        </header>
+
+        <main>
+            <section id="calculator-section">
+                <h2>Calculate Your BMI</h2>
+                <form id="bmi-form">
+                    <div class="input-group">
+                        <label for="height">Height (cm)</label>
+                        <input type="number" id="height" placeholder="e.g. 170" required min="50" max="300">
+                    </div>
+                    <div class="input-group">
+                        <label for="weight">Weight (kg)</label>
+                        <input type="number" id="weight" placeholder="e.g. 70" required min="20" max="300">
+                    </div>
+                    <button type="submit" class="btn-primary">Get My Plan</button>
+                </form>
+            </section>
+
+            <section id="result-section" class="hidden">
+                <div class="bmi-score-card">
+                    <h3>Your BMI Score</h3>
+                    <div class="score-display">
+                        <span id="bmi-value">--.-</span>
+                        <span id="bmi-category">Category</span>
+                    </div>
+                </div>
+
+                <div class="diet-plan-container">
+                    <h3>Recommended Diet Plan</h3>
+                    <div class="meal-grid">
+                        <div class="meal-card">
+                            <h4>🍳 Breakfast</h4>
+                            <p id="breakfast-plan">Loading...</p>
+                        </div>
+                        <div class="meal-card">
+                            <h4>🥗 Lunch</h4>
+                            <p id="lunch-plan">Loading...</p>
+                        </div>
+                        <div class="meal-card">
+                            <h4>🥜 Snacks</h4>
+                            <p id="snack-plan">Loading...</p>
+                        </div>
+                        <div class="meal-card">
+                            <h4>🍲 Dinner</h4>
+                            <p id="dinner-plan">Loading...</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <button id="reset-btn" class="btn-secondary">Calculate Again</button>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
